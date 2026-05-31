@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import path from "path";
 
 export default defineConfig({
-    base: "/",
+    base: "/physics_research_project_competition/",
     plugins: [react()],
     resolve: {
         alias: {
