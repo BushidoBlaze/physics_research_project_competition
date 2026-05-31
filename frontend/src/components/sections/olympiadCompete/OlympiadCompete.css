@@ -1,0 +1,240 @@
+.olympiad__compete {
+    max-width: 1720px;
+
+    padding: 80px clamp(20px, 4vw, 80px) 0;
+}
+
+.olympiad__compete-info {
+    max-width: 820px;
+
+    font-family: "Raleway", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.65;
+
+    color: #4a4a4a;
+}
+
+.olympiad__compete-info + .olympiad__compete-info {
+    margin-top: 12px;
+}
+
+.olympiad__compete-info--attention {
+    display: inline-block;
+
+    font-weight: 500;
+
+    color: #ffffff;
+    background-image: linear-gradient(#be2042 0 0);
+    background-size: 100% 1.1em;
+
+    padding: 0 6px;
+}
+
+.olympiad-compete-container {
+    margin: 32px 0 0;
+    position: relative;
+}
+
+.olympiad-compete-container:focus-visible {
+    outline: 3px solid #66a6ff;
+}
+
+.olympiad-compete-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.slider-viewport {
+    width: 100%;
+    overflow: hidden;
+}
+
+.olympiad-compete-cards {
+    display: flex;
+    align-items: stretch;
+    column-gap: 16px;
+
+    margin: 20px 0;
+    transition: transform 500ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .olympiad-compete-cards {
+        transition: none;
+    }
+}
+
+.olympiad-compete-card {
+    max-width: 100%;
+    min-height: 420px;
+
+    flex: 0 0 100%;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e6e8eb;
+
+    transition: border-color 250ms ease, box-shadow 300ms ease;
+}
+
+.olympiad-compete-card:hover {
+    border-color: #d4d7db;
+}
+
+.olympiad-compete-card__overlay {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 28px;
+}
+
+.olympiad-compete-card__header {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.olympiad-compete-card__number {
+    font-family: Inter, Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+
+    color: #be2042;
+}
+
+.olympiad-compete-card__title {
+    font-size: 14px;
+    font-family: "SF Pro", Arial, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    color: #00467f;
+}
+
+.olympiad-compete-card__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    gap: 16px;
+}
+
+.olympiad-compete-card__description {
+    font-family: Raleway, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.65;
+
+    color: #4a4a4a;
+}
+
+/*Indicators*/
+.slider-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+
+    margin-top: 20px;
+}
+
+.slider-indicator {
+    width: 28px;
+    height: 4px;
+    border: none;
+    background-color: #d4d7db;
+    cursor: pointer;
+    transition: background-color 200ms ease, width 300ms ease;
+}
+
+.slider-indicator:hover {
+    background-color: #6b7280;
+}
+
+.slider-indicator.is-active {
+    background-color: #004381;
+    width: 48px;
+}
+
+.slider-indicator:focus-visible {
+    outline: 3px solid #66a6ff;
+    outline-offset: 4px;
+}
+
+@media (min-width: 768px) {
+    .olympiad__compete-info {
+        font-size: 17px;
+    }
+
+    .olympiad-compete-card {
+        flex: 0 0 auto;
+        width: 360px;
+        max-width: 360px;
+        min-height: 420px;
+    }
+
+    .olympiad-compete-card__overlay {
+        padding: 32px;
+    }
+
+    .olympiad-compete-card__title {
+        font-size: 15px;
+    }
+
+    .olympiad-compete-card__description {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .olympiad-compete-card {
+        width: 340px;
+        max-width: 340px;
+        min-height: 440px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .olympiad__compete-info {
+        font-size: 18px;
+        line-height: 1.7;
+    }
+
+    .olympiad-compete-container {
+        margin: 48px 0 0;
+    }
+
+    .olympiad-compete-card {
+        width: 420px;
+        max-width: 420px;
+        min-height: 460px;
+    }
+
+    .olympiad-compete-card__overlay {
+        padding: 40px;
+    }
+
+    .olympiad-compete-card__number {
+        font-size: 36px;
+    }
+
+    .olympiad-compete-card__title {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .olympiad-compete-card {
+        width: 460px;
+        max-width: 460px;
+    }
+}

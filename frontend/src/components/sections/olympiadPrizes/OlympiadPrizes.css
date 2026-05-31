@@ -1,0 +1,219 @@
+.olympiad__prizes {
+    max-width: 1720px;
+
+    padding: 80px clamp(20px, 4vw, 80px) 0;
+}
+
+.olympiad-prizes__description {
+    max-width: 820px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    padding-bottom: 32px;
+}
+
+.olympiad-prizes__description-text {
+    font-family: Raleway, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.65;
+
+    color: #4a4a4a;
+}
+
+.olympiad-prizes__description-info {
+    display: block;
+
+    font-family: "SF Pro", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+
+    color: #1a1a1a;
+    background: linear-gradient(120deg, rgba(190, 32, 66, 0.08) 0%, rgba(0, 67, 129, 0.06) 100%);
+
+    padding: 12px 16px;
+    border-left: 3px solid #be2042;
+}
+
+.olympiad-prizes-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.olympiad-prizes-card {
+    min-height: 300px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e6e8eb;
+
+    transition: border-color 250ms ease, transform 350ms, box-shadow 350ms;
+}
+
+@media (hover: hover) {
+    .olympiad-prizes-card:hover {
+        border-color: #be2042;
+        transform: translateY(-4px);
+        box-shadow: 0 20px 40px -16px rgba(190, 32, 66, 0.18);
+    }
+}
+
+/* перекрытие из старого исходника — задаёт padding для overlay внутри prizes */
+.olympiad-period-card__overlay {
+    padding: 28px;
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.olympiad-prizes-card__place {
+    font-family: "Inter", Arial, sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    color: #be2042;
+
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.olympiad-prizes-card__content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.olympiad-prizes-card__description-title {
+    font-family: "SF Pro", Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+
+    color: #0a0a0a;
+    padding-bottom: 4px;
+}
+
+.olympiad-prizes-card__description {
+    flex: 1;
+}
+
+.olympiad-prizes-card__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.olympiad-prizes-card__item {
+    font-family: "Raleway", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.55;
+
+    position: relative;
+
+    color: #4a4a4a;
+
+    padding-left: 20px;
+}
+
+.olympiad-prizes-card__item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 8px;
+    height: 2px;
+
+    background-color: #be2042;
+}
+
+@media (min-width: 768px) {
+    .olympiad-prizes-cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .olympiad-prizes__description-text {
+        font-size: 17px;
+    }
+
+    .olympiad-prizes__description-info {
+        font-size: 17px;
+    }
+
+    .olympiad-prizes-card {
+        min-height: 280px;
+    }
+
+    .olympiad-prizes-card:nth-child(3) {
+        grid-column: span 2;
+    }
+
+    .olympiad-period-card__overlay {
+        padding: 32px;
+    }
+
+    .olympiad-prizes-card__item {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .olympiad-prizes-cards {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+
+    .olympiad-prizes-card,
+    .olympiad-prizes-card:nth-child(3) {
+        grid-column: auto;
+        min-height: 320px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .olympiad-prizes-cards {
+        gap: 24px;
+    }
+
+    .olympiad-prizes-card {
+        min-height: 360px;
+    }
+
+    .olympiad-period-card__overlay {
+        padding: 40px;
+    }
+
+    .olympiad-prizes-card__place {
+        font-size: 15px;
+    }
+
+    .olympiad-prizes-card__description-title {
+        font-size: 24px;
+    }
+
+    .olympiad-prizes-card__item {
+        font-size: 16px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .olympiad-prizes-card {
+        transition: border-color 200ms ease;
+    }
+
+    .olympiad-prizes-card:hover {
+        transform: none;
+    }
+}

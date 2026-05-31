@@ -1,0 +1,236 @@
+.footer {
+    color: #e6ecf5;
+    background: linear-gradient(180deg, #0b2747 0%, #06182c 100%);
+
+    padding: 40px 16px 24px;
+    margin-top: 60px;
+}
+
+.footer__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.footer__top {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+.footer__brand {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.footer__brand-mark {
+    width: 48px;
+    height: 48px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "SF Pro", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+
+    color: #ffffff;
+    background-color: #be2042;
+
+    letter-spacing: 1px;
+    flex-shrink: 0;
+}
+
+.footer__brand-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.footer__brand-name {
+    font-family: "SF Pro", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+
+    color: #ffffff;
+}
+
+.footer__brand-tagline {
+    font-family: Inter, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+
+    color: #a8b6c8;
+    max-width: 280px;
+}
+
+.footer__nav,
+.footer__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer__nav-title {
+    font-family: "SF Pro", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    color: #ffffff;
+
+    margin-bottom: 4px;
+}
+
+.footer__nav-number {
+    font-family: Raleway, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 2;
+}
+
+.footer__nav-number--contact {
+    font-family: Inter, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    
+    color: #ffffff;
+    background-color: #BE2042;
+
+    padding: 8px;
+}
+
+.footer__nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer__nav-link {
+    font-family: "Raleway", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+
+    color: #c5d0df;
+
+    transition: color 0.2s ease, transform 0.2s ease;
+    width: fit-content;
+}
+
+.footer__nav-link:hover {
+    color: #ffffff;
+    transform: translateX(3px);
+}
+
+.footer__nav-link:focus-visible {
+    outline: 2px solid #66a6ff;
+    outline-offset: 3px;
+}
+
+.footer__socials-wrap {
+    margin-top: 8px;
+}
+
+.footer__socials {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.footer__social-link {
+    color: #c5d0df;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-flex;
+}
+
+.footer__social-link:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.footer__social-link:focus-visible {
+    outline: 2px solid #66a6ff;
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+.footer__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer__copy {
+    font-family: Inter, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+
+    color: #93a3b8;
+}
+
+.footer__legal {
+    font-family: Inter, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: italic;
+
+    color: #6c7c92;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .footer__nav-link,
+    .footer__social-link {
+        transition: color 0.2s ease;
+    }
+
+    .footer__nav-link:hover,
+    .footer__social-link:hover {
+        transform: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .footer {
+        padding: 56px 32px 28px;
+    }
+
+    .footer__top {
+        grid-template-columns: 1.4fr 1fr 1fr;
+        gap: 40px;
+    }
+
+    .footer__bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1440px) {
+    .footer {
+        padding: 64px 60px 32px;
+    }
+
+    .footer__top {
+        gap: 56px;
+    }
+
+    .footer__brand-name {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .footer__wrapper {
+        max-width: 1720px;
+    }
+}

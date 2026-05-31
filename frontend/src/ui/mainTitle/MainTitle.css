@@ -1,0 +1,54 @@
+.main__title {
+    position: relative;
+
+    font-family: "SF Pro", Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.1;
+
+    color: #0a0a0a;
+
+    padding-bottom: 16px;
+    margin-bottom: 26px;
+
+    scroll-margin-top: 100px;
+}
+
+.main__title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 56px;
+    height: 3px;
+    background-color: #be2042;
+}
+
+@media (min-width: 768px) {
+    .main__title {
+        font-size: 40px;
+        padding-bottom: 20px;
+    }
+
+    .main__title::after {
+        width: 72px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .main__title {
+        font-size: 48px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .main__title {
+        font-size: 56px;
+        padding-bottom: 24px;
+    }
+
+    .main__title::after {
+        width: 88px;
+        height: 4px;
+    }
+}

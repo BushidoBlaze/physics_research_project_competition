@@ -1,0 +1,22 @@
+.switch-button {
+    width: 64px;
+    height: 64px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+    background-color: #00467F;
+
+    border: none;
+    cursor: pointer;
+    transition: 0.4s ease all;
+}
+
+.switch-button.end {
+    color: #00467F;
+    background-color: #ffffff;
+
+    border: 1px solid #006fc7;
+}
