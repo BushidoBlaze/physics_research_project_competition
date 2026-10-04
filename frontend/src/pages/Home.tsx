@@ -13,40 +13,39 @@ import BackToTopButton from "@/components/backToTop/BackToTopButton";
 
 export default function Home() {
     return (
-        <>
-            {/**/}
-            <BackToTopButton/>
+      <>
+        {/*Кнопка для быстрой прокрутки страницы к началу*/}
+        <BackToTopButton />
 
-            {/**/}
-            <HeroSection/>
+        {/*Главный экран*/}
+        <HeroSection />
 
-            {/**/}
-            <PageContent>
+        {/*Основной контейнер*/}
+        <PageContent>
+          {/*Общая информация об олимпиаде*/}
+          <OlympiadInfoSectionBlock />
 
-                {/**/}
-                <OlympiadInfoSectionBlock/>
+          {/*Расписание и ключевые этапы*/}
+          <OlympiadPeriodSectionBlock />
 
-                {/**/}
-                <OlympiadPeriodSectionBlock/>
+          {/*Информация о соревнованиях*/}
+          <OlympiadCompeteSectionBlock />
 
-                {/**/}
-                <OlympiadCompeteSectionBlock/>
+          {/*Списки олимпиадных заданий*/}
+          <TaskSection />
 
-                {/**/}
-                <TaskSection/>
+          {/*Бегущая строка (Эффект)*/}
+          <Marquee />
 
-                {/**/}
-                <Marquee/>
+          {/*Информация о наградах*/}
+          <OlympiadPrizesSectionBlock />
 
-                {/**/}
-                <OlympiadPrizesSectionBlock/>
+          {/*Блок часто задаваемых вопросов*/}
+          <FaqSection />
 
-                {/**/}
-                <FaqSection/>
-
-                {/**/}
-                <JoinSection/>
-            </PageContent>
-        </>
+          {/*Секция призыва к действию*/}
+          <JoinSection />
+        </PageContent>
+      </>
     );
 }
