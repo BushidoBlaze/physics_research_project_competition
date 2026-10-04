@@ -1,0 +1,20 @@
+.card-item__number {
+    font-family: Inter, Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
+
+    color: #be2042;
+}
+
+@media (min-width: 768px) {
+    .card-item__number {
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .card-item__number {
+        font-size: 48px;
+    }
+}

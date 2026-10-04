@@ -1,0 +1,333 @@
+.header {
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 8px;
+}
+
+.header__link {
+    transition: color 0.2s ease, transform 0.3s;
+}
+
+.header__link:not(.header__link--icon):hover {
+    color: #004381;
+}
+
+.header__link--icon:hover {
+    color: #004381;
+}
+
+.header__link--icon:focus-visible {
+    outline: 3px solid #66a6ff;
+    outline-offset: 4px;
+}
+
+.header__title {
+    font-size: 18px;
+    font-family: "SF Pro", Arial, sans-serif;
+    font-weight: 700;
+
+    color: #be2042;
+}
+
+/*Menu (desktop)*/
+.header__menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.header__button {
+    position: relative;
+
+    font-family: Raleway, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+
+    color: #4a4a4a;
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+
+    padding: 6px 0;
+    transition: color 0.2s ease;
+}
+
+.header__button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #be2042;
+    transition: width 250ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.header__button:hover {
+    color: #0a0a0a;
+}
+
+.header__button:hover::after {
+    width: 100%;
+}
+
+.header__button:focus-visible {
+    outline: 3px solid #66a6ff;
+    outline-offset: 4px;
+}
+
+.header__button.active,
+.header__button[aria-current="true"] {
+    color: #004381;
+}
+
+.header__button.active::after,
+.header__button[aria-current="true"]::after {
+    width: 100%;
+    background-color: #004381;
+}
+
+.header__login {
+    font-family: Raleway, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+
+    color: #004381;
+}
+
+.header__login:hover {
+    color: #004381;
+    font-weight: 600;
+}
+
+.header__login::after {
+    display: none;
+}
+
+/*Burger*/
+.burger-header {
+    display: flex;
+    align-items: center;
+}
+
+.burger-button {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #004381;
+    background-color: transparent;
+    border: 1px solid #004381;
+    border-radius: 0;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.burger-button:hover {
+    background-color: #004381;
+    color: #ffffff;
+}
+
+.burger-button:focus-visible {
+    outline: 3px solid #66a6ff;
+    outline-offset: 2px;
+}
+
+.burger-button__icon {
+    width: 22px;
+    height: 22px;
+}
+
+.burger-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 85%;
+    max-width: 380px;
+    height: 100%;
+    padding: 80px 28px 32px;
+    background-color: #ffffff;
+    border-right: 1px solid rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    transform: translateX(-100%);
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    z-index: 20;
+    box-shadow: 4px 0 30px rgba(0, 0, 0, 0.08);
+}
+
+.burger-menu--open {
+    transform: translateX(0);
+}
+
+.burger-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #004381;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 0;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.burger-close:hover {
+    background-color: rgba(0, 67, 129, 0.08);
+}
+
+.burger-close:focus-visible {
+    outline: 3px solid #66a6ff;
+    outline-offset: 2px;
+}
+
+.burger-menu__list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.burger-menu__item {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.burger-menu__button {
+    font-size: 17px;
+    color: #1a1a1a;
+    font-family: "Raleway", Arial, sans-serif;
+    font-weight: 500;
+    text-align: left;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    padding: 16px 0;
+    width: 100%;
+    display: block;
+    transition: color 0.2s ease, padding-left 0.25s ease;
+}
+
+.burger-menu__button:hover {
+    color: #be2042;
+    padding-left: 4px;
+}
+
+.burger-menu__button:focus-visible {
+    outline: 3px solid #66a6ff;
+    outline-offset: 2px;
+}
+
+.burger-menu__credit {
+    font-family: Raleway, Arial, sans-serif;
+    font-size: 11px;
+
+    color: rgba(26, 26, 26, 0.32);
+
+    margin-top: auto;
+    padding-top: 24px;
+    text-align: center;
+    letter-spacing: 0.4px;
+    user-select: none;
+}
+
+.burger-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(10, 22, 40, 0.55);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 15;
+}
+
+.burger-overlay--visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .burger-menu,
+    .burger-overlay,
+    .header__button,
+    .header__link,
+    .header__login {
+        transition: none;
+    }
+}
+
+/* nav/burger toggling */
+.header__desktop-nav {
+    display: none;
+}
+
+.header__mobile-nav {
+    display: flex;
+}
+
+@media (min-width: 768px) {
+    .header__title {
+        font-size: 22px;
+    }
+
+    .header__link--icon {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header {
+        padding: 16px clamp(24px, 4vw, 60px);
+    }
+
+    .header__title {
+        font-size: 24px;
+    }
+
+    .header__link--icon {
+        font-size: 26px;
+    }
+
+    .header__desktop-nav {
+        display: block;
+    }
+
+    .header__mobile-nav {
+        display: none;
+    }
+}
+
+@media (min-width: 1440px) {
+    .header__menu {
+        gap: 40px;
+    }
+}

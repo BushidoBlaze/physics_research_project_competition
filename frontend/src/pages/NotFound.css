@@ -1,0 +1,214 @@
+.not-found {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    overflow: hidden;
+
+    padding: 80px clamp(20px, 5vw, 80px);
+
+    background-color: #ffffff;
+}
+
+.not-found__bg {
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(ellipse 900px 600px at 90% -10%, rgba(0, 67, 129, 0.07), transparent 65%),
+        radial-gradient(ellipse 700px 500px at -10% 110%, rgba(190, 32, 66, 0.06), transparent 65%);
+
+    pointer-events: none;
+}
+
+.not-found__bg::before {
+    content: "404";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -48%);
+
+    font-family: Inter, Arial, sans-serif;
+    font-weight: 700;
+    font-size: clamp(220px, 32vw, 480px);
+    line-height: 1;
+    letter-spacing: -12px;
+
+    color: transparent;
+    -webkit-text-stroke: 1.5px rgba(0, 67, 129, 0.06);
+
+    white-space: nowrap;
+    user-select: none;
+    pointer-events: none;
+}
+
+.not-found__inner {
+    width: 100%;
+    max-width: 640px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    position: relative;
+    z-index: 1;
+
+    text-align: center;
+}
+
+.not-found__code {
+    font-family: Inter, Arial, sans-serif;
+    font-weight: 700;
+    font-size: clamp(88px, 14vw, 160px);
+    line-height: 1;
+    letter-spacing: -4px;
+
+    color: transparent;
+    background: linear-gradient(135deg, #004381 0%, #be2042 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    user-select: none;
+}
+
+.not-found__icon {
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #004381;
+    background-color: rgba(0, 67, 129, 0.06);
+
+    border: 1px solid rgba(0, 67, 129, 0.14);
+    border-radius: 50%;
+
+    margin-top: 4px;
+}
+
+.not-found__title {
+    font-family: "SF Pro", Arial, sans-serif;
+    font-weight: 700;
+    font-size: clamp(20px, 3vw, 28px);
+
+    color: #0a0a0a;
+
+    margin-top: 4px;
+}
+
+.not-found__text {
+    max-width: 480px;
+
+    font-family: Raleway, Arial, sans-serif;
+    font-weight: 400;
+    font-size: clamp(14px, 1.8vw, 16px);
+    line-height: 1.6;
+
+    color: rgba(26, 26, 26, 0.65);
+}
+
+.not-found__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    margin-top: 12px;
+}
+
+.not-found__btn {
+    min-width: 148px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: Raleway, Arial, sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+
+    padding: 13px 28px;
+
+    border: 1px solid transparent;
+    border-radius: 0;
+
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.not-found__btn:hover {
+    transform: translateY(-2px);
+}
+
+.not-found__btn:focus-visible {
+    outline: 3px solid #66a6ff;
+    outline-offset: 3px;
+}
+
+.not-found__btn--primary {
+    color: #ffffff;
+    background-color: #004381;
+
+    box-shadow: 0 1px 2px rgba(0, 67, 129, 0.18);
+}
+
+.not-found__btn--primary:hover {
+    background-color: #003162;
+
+    box-shadow: 0 8px 24px rgba(0, 67, 129, 0.28);
+}
+
+.not-found__btn--ghost {
+    color: #004381;
+    background-color: transparent;
+
+    border-color: rgba(0, 67, 129, 0.3);
+}
+
+.not-found__btn--ghost:hover {
+    background-color: rgba(0, 67, 129, 0.06);
+
+    border-color: #004381;
+}
+
+@media (min-width: 768px) {
+    .not-found__inner {
+        gap: 20px;
+    }
+
+    .not-found__icon {
+        width: 64px;
+        height: 64px;
+    }
+
+    .not-found__actions {
+        margin-top: 16px;
+        gap: 14px;
+    }
+
+    .not-found__btn {
+        min-width: 160px;
+        font-size: 16px;
+        padding: 14px 32px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .not-found__btn {
+        transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .not-found__btn:hover {
+        transform: none;
+    }
+}
