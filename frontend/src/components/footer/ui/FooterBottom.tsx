@@ -1,4 +1,4 @@
-import { FOOTER_SECTION_LINKS } from "../data/footer-sections.data.ts";
+import { FOOTER_SECTION_LINKS } from "../data/footer-sections.data.tsx";
 
 import FooterSocials from "./FooterSocials.tsx";
 
