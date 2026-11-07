@@ -1,0 +1,168 @@
+.hero__container {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.hero__slider {
+  position: absolute;
+  z-index: 0;
+
+  inset: 0;
+  overflow: hidden;
+}
+
+.hero__background {
+  position: absolute;
+  inset: 0;
+
+  background-color: #0b1020;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.hero__background.active {
+  opacity: 1;
+}
+
+.hero__overlay {
+  position: absolute;
+  z-index: 1;
+
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero__content {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  position: relative;
+  z-index: 5;
+}
+
+.hero__content-section {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.hero__slide {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 16px;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.hero__slide.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hero__title {
+  max-width: 90%;
+  margin: 0;
+
+  font-family: "SF Pro", Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #ffffff;
+
+  text-align: center;
+}
+
+.hero__text {
+  max-width: 90%;
+  margin: 0;
+
+  font-family: Raleway, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.6px;
+
+  color: rgba(255, 255, 255, 0.88);
+
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero__content-section {
+    padding: 0 32px;
+  }
+
+  .hero__title {
+    max-width: 80%;
+    font-size: 32px;
+  }
+
+  .hero__text {
+    max-width: 75%;
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero__content-section {
+    padding: 0 48px;
+  }
+
+  .hero__title {
+    max-width: 70%;
+    font-size: 36px;
+  }
+
+  .hero__text {
+    max-width: 65%;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero__title {
+    font-size: 44px;
+  }
+
+  .hero__text {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .hero__title {
+    font-size: 52px;
+  }
+
+  .hero__text {
+    max-width: 55%;
+    font-size: 22px;
+  }
+}

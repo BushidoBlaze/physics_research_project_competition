@@ -1,4 +1,4 @@
-import HeroSection from "@/components/sections/heroSection/HeroSection.tsx";
+import HeroSection from "@/components/sections/heroSection/ui/HeroSection";
 import PageContent from "@/layouts/PageContent.tsx";
 import OlympiadInfoSectionBlock from "@/components/sections/olympiadInfo/OlympiadInfoSectionBlock.tsx";
 import OlympiadPeriodSectionBlock from "@/components/sections/olympiadPeriod/OlympiadPeriodSectionBlock.tsx";
