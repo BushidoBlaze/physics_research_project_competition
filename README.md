@@ -8,7 +8,7 @@
 - **[lucide-react](https://www.npmjs.com/package/lucide-react)** `^0.552.0` — Основной набор иконок.
 - **[react-icons](https://www.npmjs.com/package/react-icons)** `^5.5.0` — дополнительный набор иконок.
 
-## Скриншоты Desktop
+## Скриншоты - Desktop
 ### Секция с информацией о конкурсе
 <img width="1918" height="911" alt="image" src="https://github.com/user-attachments/assets/78d19841-b9c4-43f1-bbef-b81079039fcf" />
 
@@ -20,6 +20,9 @@
 
 ### Секция - частые вопросы
 <img width="1918" height="900" alt="image" src="https://github.com/user-attachments/assets/ca46df31-312f-47be-b52a-ba241ae87049" />
+
+## Скриншоты - Molibe (качество съел редактор объединения фото)
+<img width="1155" height="450" alt="image" src="https://github.com/user-attachments/assets/65b1f988-f796-4bae-9179-b9554e53d4e5" />
 
 ### Структура проекта
 ```
