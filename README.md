@@ -1,18 +1,66 @@
-## Лендинг страница конкурса исследовательских проектов по физике для школьников.
+## Лендинг конкурса исследовательских проектов по физике
 
-## Стек технологий:
+### Основные технологии:
+[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)](https://react.dev) [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org) [![Vite](https://img.shields.io/badge/Vite-7-646CFF?logo=vite&logoColor=white)](https://vite.dev) [![CSS](https://img.shields.io/badge/CSS-3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/docs/Web/CSS)
 
-- React 19
-- TypeScript 5.9
-- Vite 7
-- React Router DOM 7
-- Lucide React, React Icons
-- Vanilla CSS (BEM)
+### Дополнительные библиотеки:
+- **[react-router-dom](https://www.npmjs.com/package/react-router-dom)** `^7.16.0` — декларативный роутинг.
+- **[lucide-react](https://www.npmjs.com/package/lucide-react)** `^0.552.0` — Основной набор иконок.
+- **[react-icons](https://www.npmjs.com/package/react-icons)** `^5.5.0` — дополнительный набор иконок.
 
-## Запуск:
+## Скриншоты Desktop
+### Секция с информацией о конкурсе
+<img width="1918" height="911" alt="image" src="https://github.com/user-attachments/assets/78d19841-b9c4-43f1-bbef-b81079039fcf" />
 
-**Требования:** Node.js 18+, npm 9+
+### Секция со сроками проведения
+<img width="1918" height="907" alt="image" src="https://github.com/user-attachments/assets/f0f345b5-da23-4ada-a18c-f2b4cf9ba7ac" />
 
+### Cекция об участие в конкурсе
+<img width="1918" height="903" alt="image" src="https://github.com/user-attachments/assets/dd25fa8d-2304-4624-9c10-40fba3c79b63" />
+
+### Секция - частые вопросы
+<img width="1918" height="900" alt="image" src="https://github.com/user-attachments/assets/ca46df31-312f-47be-b52a-ba241ae87049" />
+
+### Структура проекта
+```
+.github/
+└── workflows/                  # CI/CD
+
+frontend/
+├── public/
+│   └── images/                 # Изображения
+│
+├── src/
+│   ├── assets/                 # Локальные ресурсы
+│   │   ├── fonts/              # Шрифты
+│   │   └── styles/             # Глобальные стили
+│   │
+│   ├── components/             # Блоки интерфейса
+│   │   ├── backToTop/          # Кнопка "Вернуться в начало страницы"
+│   │   ├── footer/             # Подвал
+│   │   ├── header/             # Шапка сайта
+│   │   ├── marquee/            # Бегущая строка
+│   │   └── sections/           # Секции страниц
+│   │       ├── faqSection/         # Секция - частые вопросы
+│   │       ├── heroSection/        # hero-секция
+│   │       ├── joinSection/        # Секция с призывом к действию
+│   │       ├── olympiadCompete/    # Секция об участие в конкурсе
+│   │       ├── olympiadInfo/       # Секция с информацией о конкурсе
+│   │       ├── olympiadPeriod/     # Секция со сроками проведения
+│   │       ├── olympiadPrizes/     # Секция с информацией о призах
+│   │       └── taskSection/        # Секция с задания
+│   │
+│   ├── layouts/                # Layout-обёртка
+│   ├── pages/                  # Страницы
+│   ├── ui/                     # Переиспользуемые UI-элементы
+│   ├── App.tsx                 # Корневой компонент и маршруты
+│   └── main.tsx                # Точка входа
+│
+└── vite.config.ts              # Конфигурация сборщика (Vite)
+```
+
+
+### Запуск
 ```bash
 # Установка зависимостей
 npm install
@@ -20,63 +68,15 @@ npm install
 # Режим разработки
 npm run dev
 
+# Линтинг
+npm run lint
+
 # Сборка для продакшена в папку dist/
 npm run build
 
 # Предпросмотр сборки
 npm run preview
-
-# Линтинг
-npm run lint
 ```
 
----
-
-## Ключевые решения:
-
-### Роутинг:
-
-`MainLayout` оборачивает только главную страницу — страница 404 рендерится полностью автономно (без хедера и футера):
-
-```tsx
-<Routes>
-  <Route path="/" element={<MainLayout><Home/></MainLayout>}/>
-  <Route path="*" element={<NotFound/>}/>
-</Routes>
-```
-
-### Бургер-меню:
-
-Панель и оверлей рендерятся через `createPortal` в `document.body` — чтобы обойти ограничение `position: fixed` от `backdrop-filter` в хедере.
-
-### Алиас путей:
-
-`@` → `src/` (настроено в `vite.config.ts`).
-
-### Цветовая палитра:
-
-| Назначение | Значение |
-|---|---|
-| Акцент красный | `#be2042` |
-| Основной синий | `#004381` / `#00467f` |
-| Текст основной | `#0a0a0a` |
-| Текст вторичный | `#3a3a4a` / `#4a4a4a` |
-| Разделители | `#e6e8eb` |
-| Фон карточек | `#fafafa` |
-
----
-
-## Возможные проблемы:
-
-**Белый экран после деплоя** - убедитесь, что сервер настроен на отдачу `index.html` для всех маршрутов. В `vite.config.ts` стоит `base: "/"`.
-
-**Зависимости не устанавливаются:**
-```bash
-rm -rf node_modules package-lock.json
-npm install
-```
----
-
-## Лицензия:
-
-Учебный проект, распространяется как есть.
+### Лицензия:
+*Учебный проект*.
